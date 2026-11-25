@@ -15,3 +15,6 @@ derby.log
 *.tgz
 *.tar.gz
 .DS_Store
+
+# Antisèches perso (ne pas rendre)
+antiseches/

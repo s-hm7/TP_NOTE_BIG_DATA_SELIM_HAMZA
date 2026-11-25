@@ -8,7 +8,7 @@ JAVA8=/usr/lib/jvm/java-8-openjdk-amd64
 
 echo "==> 1/6 Paquets système (Java 8, outils)"
 sudo apt-get update -y -qq
-sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq openjdk-8-jdk-headless curl zip unzip python3 dos2unix > /dev/null
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq openjdk-8-jdk-headless curl zip unzip python3 dos2unix git-lfs > /dev/null
 sudo update-alternatives --set java  "$JAVA8/jre/bin/java" 2>/dev/null || true
 sudo update-alternatives --set javac "$JAVA8/bin/javac"    2>/dev/null || true
 

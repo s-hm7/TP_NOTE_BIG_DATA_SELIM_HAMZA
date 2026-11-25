@@ -1,0 +1,18 @@
+// <nom>.scala — à lancer depuis spark-shell (ouvert à la racine du dépôt) :   :paste scala/<nom>.scala
+// Objectif : ...
+// Entrée   : ...            Sortie attendue : ...
+sc.setLogLevel("ERROR")
+
+val entree = "hdfs/..."                       // dossier ou fichier (relatif à la racine du dépôt)
+val lignes = sc.textFile(entree)
+println("Lignes lues : " + lignes.count())
+
+val res = lignes
+  .filter(_.nonEmpty)                          // TODO 1 : filtre
+  .map(l => (l.split(";")(0), 1))              // TODO 2 : (clé, valeur)
+  .reduceByKey(_ + _)                          // TODO 3 : agrégat
+  .sortBy(_._2, false)
+
+res.take(20).foreach(println)
+println("Nombre de clés : " + res.count())
+// res.map({ case (k, v) => k + "\t" + v }).saveAsTextFile("hdfs/out_<nom>")   // dossier qui ne doit pas exister

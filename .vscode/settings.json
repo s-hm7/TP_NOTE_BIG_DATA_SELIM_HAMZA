@@ -1,0 +1,14 @@
+{
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 500,
+  "files.eol": "\n",
+  "java.configuration.runtimes": [
+    { "name": "JavaSE-1.8", "path": "/usr/lib/jvm/java-8-openjdk-amd64", "default": true }
+  ],
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "/opt/spark/jars/*.jar"
+  ],
+  "files.exclude": { "**/*.class": true },
+  "search.exclude": { "data/**": true, "hdfs/**": true, "traces/**": true }
+}

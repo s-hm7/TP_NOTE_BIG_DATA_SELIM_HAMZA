@@ -1,0 +1,22 @@
+{
+  "name": "TP noté Big Data — Java 8 · Hadoop 3.2.1 · Spark 3.1.2",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "containerEnv": {
+    "JAVA_HOME": "/usr/lib/jvm/java-8-openjdk-amd64",
+    "HADOOP_HOME": "/opt/hadoop",
+    "SPARK_HOME": "/opt/spark"
+  },
+  "remoteEnv": {
+    "PATH": "/usr/lib/jvm/java-8-openjdk-amd64/bin:${containerEnv:PATH}:/opt/hadoop/bin:/opt/spark/bin"
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "waitFor": "postCreateCommand",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "scala-lang.scala"
+      ]
+    }
+  }
+}

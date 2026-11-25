@@ -1,0 +1,17 @@
+# Compilation
+*.class
+*.jar
+bin/
+# Données brutes, "HDFS" local, sorties de jobs, logs
+data/*
+!data/README.md
+hdfs/
+traces/
+output_*/
+spark-warehouse/
+metastore_db/
+derby.log
+# Divers
+*.tgz
+*.tar.gz
+.DS_Store
